@@ -23,8 +23,8 @@ Partial Class POSForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -227,7 +227,7 @@ Partial Class POSForm
         Me.btn_NewCustomer.BackColor = System.Drawing.Color.Gold
         Me.btn_NewCustomer.Cursor = System.Windows.Forms.Cursors.Cross
         Me.btn_NewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_NewCustomer.Location = New System.Drawing.Point(38, 468)
+        Me.btn_NewCustomer.Location = New System.Drawing.Point(18, 471)
         Me.btn_NewCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_NewCustomer.Name = "btn_NewCustomer"
         Me.btn_NewCustomer.Size = New System.Drawing.Size(122, 50)
@@ -241,7 +241,7 @@ Partial Class POSForm
         Me.btn_ExistingCustomer.BackColor = System.Drawing.Color.Gold
         Me.btn_ExistingCustomer.Cursor = System.Windows.Forms.Cursors.Cross
         Me.btn_ExistingCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_ExistingCustomer.Location = New System.Drawing.Point(229, 468)
+        Me.btn_ExistingCustomer.Location = New System.Drawing.Point(209, 471)
         Me.btn_ExistingCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_ExistingCustomer.Name = "btn_ExistingCustomer"
         Me.btn_ExistingCustomer.Size = New System.Drawing.Size(132, 50)
@@ -274,23 +274,23 @@ Partial Class POSForm
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.Location = New System.Drawing.Point(19, 112)
         Me.DataGridView1.Name = "DataGridView1"
@@ -333,7 +333,7 @@ Partial Class POSForm
         Me.btnCancelOrder.Cursor = System.Windows.Forms.Cursors.Cross
         Me.btnCancelOrder.Enabled = False
         Me.btnCancelOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCancelOrder.Location = New System.Drawing.Point(133, 532)
+        Me.btnCancelOrder.Location = New System.Drawing.Point(113, 535)
         Me.btnCancelOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancelOrder.Name = "btnCancelOrder"
         Me.btnCancelOrder.Size = New System.Drawing.Size(122, 50)
@@ -347,7 +347,7 @@ Partial Class POSForm
         Me.btn_checkout.BackColor = System.Drawing.Color.LawnGreen
         Me.btn_checkout.Cursor = System.Windows.Forms.Cursors.Cross
         Me.btn_checkout.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_checkout.Location = New System.Drawing.Point(229, 391)
+        Me.btn_checkout.Location = New System.Drawing.Point(209, 394)
         Me.btn_checkout.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_checkout.Name = "btn_checkout"
         Me.btn_checkout.Size = New System.Drawing.Size(132, 54)
@@ -481,7 +481,7 @@ Partial Class POSForm
         Me.btn_Payment.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btn_Payment.BackColor = System.Drawing.Color.LawnGreen
         Me.btn_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_Payment.Location = New System.Drawing.Point(38, 391)
+        Me.btn_Payment.Location = New System.Drawing.Point(18, 394)
         Me.btn_Payment.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_Payment.Name = "btn_Payment"
         Me.btn_Payment.Size = New System.Drawing.Size(122, 54)
