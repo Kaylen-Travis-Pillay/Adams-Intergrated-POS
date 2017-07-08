@@ -53,30 +53,7 @@ Public Class Main_MDIForm
     End Sub
 
     Private Sub btn_CALLMANAGER_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_CALLMANAGER.Click
-
-        Try
-            Dim Smtp_Server As New SmtpClient
-            Dim e_mail As New MailMessage()
-            Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("neurosolutions.igp@gmail.com", "password123!")
-            Smtp_Server.Port = 587
-            Smtp_Server.EnableSsl = True
-            Smtp_Server.Host = "smtp.gmail.com"
-
-            e_mail = New MailMessage()
-            e_mail.From = New MailAddress("neurosolutions.igp@gmail.com")
-            e_mail.To.Add("msmaphanga07@gmail.com")
-            e_mail.Subject = employee_type_STR & " Assistance Required"
-            e_mail.IsBodyHtml = False
-            e_mail.Body = employee_name & " is in need of your assistance"
-            Smtp_Server.Send(e_mail)
-            MsgBox("Manager has been notified")
-
-        Catch error_t As Exception
-            MessageBox.Show("Please try connecting using different data source for sending this message")
-            MsgBox(error_t.ToString)
-        End Try
-
+        emailThread.RunWorkerAsync()
     End Sub
 
     Public Sub SetEmployeeName(ByVal e As String)
@@ -99,11 +76,40 @@ Public Class Main_MDIForm
         Return employee_name
     End Function
 
-    Private Sub btn_MANAGER_Click(sender As System.Object, e As System.EventArgs) Handles btn_MANAGER.Click
+    Private Sub btn_MANAGER_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_MANAGER.Click
         FormSetUp(Manager_Main)
     End Sub
 
-    Private Sub btn_KITCHEN_Click(sender As System.Object, e As System.EventArgs) Handles btn_KITCHEN.Click
+    Private Sub btn_KITCHEN_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_KITCHEN.Click
         FormSetUp(Chef)
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles emailThread.DoWork
+        Try
+            Dim Smtp_Server As New SmtpClient
+            Dim e_mail As New MailMessage()
+            Smtp_Server.UseDefaultCredentials = False
+            Smtp_Server.Credentials = New Net.NetworkCredential("neurosolutions.igp@gmail.com", "password123!")
+            Smtp_Server.Port = 587
+            Smtp_Server.EnableSsl = True
+            Smtp_Server.Host = "smtp.gmail.com"
+
+            e_mail = New MailMessage()
+            e_mail.From = New MailAddress("neurosolutions.igp@gmail.com")
+            e_mail.To.Add("kaylen.student@gmail.com")
+            e_mail.Subject = employee_type_STR & " Assistance Required"
+            e_mail.IsBodyHtml = False
+            e_mail.Body = employee_name & " is in need of your assistance"
+            Smtp_Server.Send(e_mail)
+
+        Catch error_t As Exception
+            MessageBox.Show("Please try connecting using different data source for sending this message")
+            MsgBox(error_t.ToString)
+        End Try
+
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles emailThread.RunWorkerCompleted
+        MessageBox.Show("The manager has been notified")
     End Sub
 End Class

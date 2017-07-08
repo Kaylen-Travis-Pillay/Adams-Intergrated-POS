@@ -42,6 +42,7 @@ Partial Class Main_MDIForm
         Me.lbl_CURRENTSTATUS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lbl_LOGGINAS = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.emailThread = New System.ComponentModel.BackgroundWorker()
         Me.ToolStrip2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -177,6 +178,9 @@ Partial Class Main_MDIForm
         Me.lbl_LOGGINAS.Name = "lbl_LOGGINAS"
         resources.ApplyResources(Me.lbl_LOGGINAS, "lbl_LOGGINAS")
         '
+        'emailThread
+        '
+        '
         'Main_MDIForm
         '
         resources.ApplyResources(Me, "$this")
@@ -215,5 +219,6 @@ Partial Class Main_MDIForm
     Friend WithEvents lbl_LOGGINAS As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents btn_CALLMANAGER As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents emailThread As System.ComponentModel.BackgroundWorker
 
 End Class
