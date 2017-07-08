@@ -38,3 +38,7 @@ C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS\AdamsCoffeeBar
 C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar-IntegratedPOS.xml
 C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar-IntegratedPOS.pdb
 C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar_IntegratedPOS.MNG_ProductAndOrderManagement.resources
+C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS (Recommended Resolution)\AdamsCoffeeBar-IntegratedPOS\bin\Debug\AdamsCoffeeBar-IntegratedPOS.exe.config
+C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS (Recommended Resolution)\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar-IntegratedPOS.exe
+C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS (Recommended Resolution)\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar-IntegratedPOS.xml
+C:\Users\ktpso\Desktop\Adams-Intergrated-POS\Adams-Coffee-Bar-POS (Recommended Resolution)\AdamsCoffeeBar-IntegratedPOS\obj\x86\Debug\AdamsCoffeeBar-IntegratedPOS.pdb
