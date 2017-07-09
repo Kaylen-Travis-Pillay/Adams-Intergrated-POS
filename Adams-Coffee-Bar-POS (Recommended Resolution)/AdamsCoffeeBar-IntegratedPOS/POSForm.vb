@@ -98,6 +98,25 @@ Public Class POSForm
 
         gb_Products.Enabled = False
         gb_OffTheShelf.Enabled = False
+
+        FMDropdown()
+        OTSDropdown()
+
+    End Sub
+
+    Private Sub FMDropdown()
+        'code for getting the products for the FM items in the dropdown'
+        FreshlyMade_ProductTableAdapter1.Fill(Group3DataSet1.FreshlyMade_Product)
+
+        If Group3DataSet1.FreshlyMade_Product.Rows.Count > 51 Then
+            For i As Integer = 50 To (Group3DataSet1.FreshlyMade_Product.Rows.Count - 1) Step 1
+                FM_ComboBox.Items.Add(Group3DataSet1.FreshlyMade_Product.Rows(i).Item(4).ToString())
+            Next
+        End If
+    End Sub
+
+    Private Sub OTSDropdown()
+        'code for getting the off the shelf items in the dropdown'
     End Sub
 
     Private Sub Button6_Click(sender As System.Object, e As System.EventArgs)
@@ -447,6 +466,47 @@ Public Class POSForm
     End Sub
 
     
+    Private Sub FM_ComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FM_ComboBox.SelectedIndexChanged
+
+        Dim ProductID As Integer = FreshlyMade_ProductTableAdapter1.GetDataByName(FM_ComboBox.SelectedItem.ToString()).Rows(0).Item(0)
+        Dim Product_Type As Integer = 1
+        Dim OrderdQty As Integer
+
+        If AddToOrder(ProductID, Product_Type) Then
+
+            Try
+                OrderdQty = InputBox("Enter the quantity")
+
+                If OrderdQty <= 0 Then
+                    CreateObject("WScript.Shell").Popup("Invalid Quantity Entered", 2, "ERROR")
+                    Throw New Exception
+                End If
+
+                'This code MPILO'
+                If Not ValidProductPurchase(ProductID, 1) Then  'For ots use this method POSForm.ValidProductPurchase(ProductID, orderedQTY)
+                    CreateObject("WScript.Shell").Popup("Not enough ingredients to make product!", 2, "ERROR")
+                    Throw New Exception
+                End If
+
+            Catch w As Exception
+                CreateObject("WScript.Shell").Popup("Invalid Quantity Entered", 2, "ERROR")
+                orderMap.Remove(ProductID)
+                Return
+            End Try
+
+
+
+            FreshlyMade_ProductTableAdapter1.FillByFMProductID(Group3DataSet1.FreshlyMade_Product, ProductID)
+
+
+            'Add Product ID for all the buttons
+            If Group3DataSet1.FreshlyMade_Product.Rows.Count > 0 Then
+                DataGridView1.Rows.Add(ProductID, OrderdQty, Group3DataSet1.FreshlyMade_Product.Rows(0).Item(4).ToString(), (Group3DataSet1.FreshlyMade_Product.Rows(0).Item(3) * OrderdQty))
+            End If
+
+        End If
+
+    End Sub
 End Class
 
 Public Class myPrinter
