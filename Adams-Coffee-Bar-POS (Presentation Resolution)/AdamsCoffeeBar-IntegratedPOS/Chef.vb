@@ -28,7 +28,7 @@
             'For all the orders in the table adapter'
             If Group3DataSet1.Order_.Rows.Count > 0 Then
                 For orders As Integer = 1 To (Group3DataSet1.Order_.Rows.Count) Step 1
-                    isOrderNotComplete = Group3DataSet1.Order_.Rows(orders - 1).Item(6).ToString = "Not Complete"
+                    isOrderNotComplete = (Group3DataSet1.Order_.Rows(orders - 1).Item(6).ToString = "Not Complete")
                     isContainedInDisplay = displayOrdersList.Contains(Group3DataSet1.Order_.Rows(orders - 1).Item(0))
 
                     If isOrderNotComplete And (Not isContainedInDisplay) Then

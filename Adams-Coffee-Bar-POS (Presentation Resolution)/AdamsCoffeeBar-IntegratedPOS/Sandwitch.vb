@@ -18,7 +18,7 @@
                 End If
 
                 'This code MPILO'
-                If Not POSForm.ValidProductPurchase(ProductID, 1) Then  'For ots use this method POSForm.ValidProductPurchase(ProductID, orderedQTY)
+                If Not POSForm.ValidProductPurchase(ProductID, 1, OrderdQty) Then  'For ots use this method POSForm.ValidProductPurchase(ProductID, orderedQTY)
                     CreateObject("WScript.Shell").Popup("Not enough ingredients to make product!", 2, "ERROR")
                     Throw New Exception
                 End If
@@ -60,7 +60,7 @@
                 End If
 
                 'This code MPILO'
-                If Not POSForm.ValidProductPurchase(ProductID, 1) Then  'For ots use this method POSForm.ValidProductPurchase(ProductID, orderedQTY)
+                If Not POSForm.ValidProductPurchase(ProductID, 1, OrderdQty) Then  'For ots use this method POSForm.ValidProductPurchase(ProductID, orderedQTY)
                     CreateObject("WScript.Shell").Popup("Not enough ingredients to make product!", 2, "ERROR")
                     Throw New Exception
                 End If

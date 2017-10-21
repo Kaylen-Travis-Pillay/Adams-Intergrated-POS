@@ -55,6 +55,7 @@
             CustomerTableAdapter1.FillByEmail(Group3DataSet1.Customer, tempEmail)
 
             If Group3DataSet1.Customer.Rows.Count > 0 Then
+
                 Me.Close()
                 'MessageBox.Show(" Welcome " & Group3DataSet1.Customer.Rows(0).Item(1).ToString)
                 POSForm.Set_Customer_Name(Group3DataSet1.Customer.Rows(0).Item(1).ToString)
@@ -72,6 +73,7 @@
                 POSForm.btn_Payment.Enabled = True
                 POSForm.btn_ExistingCustomer.Enabled = False
                 POSForm.btn_NewCustomer.Enabled = False
+
             Else
 
                 MessageBox.Show("ERROR: NO SUCH CUSTOMER")

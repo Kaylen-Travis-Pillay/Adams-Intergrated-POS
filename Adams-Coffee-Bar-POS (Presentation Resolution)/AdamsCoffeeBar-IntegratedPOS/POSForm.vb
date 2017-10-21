@@ -159,18 +159,21 @@ Public Class POSForm
             FreshlyMadeProduct_IngredientTableAdapter1.FillByProductID(Group3DataSet1.FreshlyMadeProduct_Ingredient, ProductID)
 
             If Group3DataSet1.FreshlyMadeProduct_Ingredient.Rows.Count > 0 Then
+
+                Dim count As Integer = 0
                 For i As Integer = 0 To Group3DataSet1.FreshlyMadeProduct_Ingredient.Rows.Count - 1 Step 1
                     Dim ingredientID As Integer = Group3DataSet1.FreshlyMadeProduct_Ingredient.Rows(i).Item(1)
                     Dim currentQTY As Integer = IngredientTableAdapter1.GetIngrediant(ingredientID).Rows(0).Item(2)
                     Dim RecepieQTY As Integer = Group3DataSet1.FreshlyMadeProduct_Ingredient.Rows(i).Item(2)
 
-                    If RecepieQTY > currentQTY Then
-                        returnBool = False
-
+                    If (RecepieQTY * OrderedQty) >= currentQTY Then
+                        count = count + 1
                     End If
                 Next
 
-
+                If count > 0 Then
+                    returnBool = False
+                End If
 
             Else
                 returnBool = False
@@ -447,6 +450,9 @@ Public Class POSForm
     End Sub
 
     
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        FreshlyMadeDynamicButtons.Show()
+    End Sub
 End Class
 
 Public Class myPrinter

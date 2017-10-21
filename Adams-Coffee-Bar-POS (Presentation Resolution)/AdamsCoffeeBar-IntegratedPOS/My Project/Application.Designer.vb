@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.AdamsCoffeeBar_IntegratedPOS.Main_MDIForm
+            Me.MainForm = Global.AdamsCoffeeBar_IntegratedPOS.Chef
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

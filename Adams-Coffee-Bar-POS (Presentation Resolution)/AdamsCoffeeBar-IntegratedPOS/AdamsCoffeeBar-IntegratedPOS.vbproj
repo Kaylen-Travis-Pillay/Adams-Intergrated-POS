@@ -14,7 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\kayle\Desktop\</PublishUrl>
     <Install>true</Install>
@@ -78,10 +79,14 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdamsCoffeeBar-IntegratedPOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -168,6 +173,12 @@
     <Compile Include="FMOther.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FreshlyMadeDynamicButtons.Designer.vb">
+      <DependentUpon>FreshlyMadeDynamicButtons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FreshlyMadeDynamicButtons.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="group3DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +186,12 @@
     </Compile>
     <Compile Include="group3DataSet.vb">
       <DependentUpon>group3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpForm.Designer.vb">
+      <DependentUpon>HelpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpForm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HotBeverages1.Designer.vb">
       <DependentUpon>HotBeverages1.vb</DependentUpon>
@@ -321,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMOther.resx">
       <DependentUpon>FMOther.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreshlyMadeDynamicButtons.resx">
+      <DependentUpon>FreshlyMadeDynamicButtons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HotBeverages1.resx">
       <DependentUpon>HotBeverages1.vb</DependentUpon>
